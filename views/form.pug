@@ -1,4 +1,9 @@
 extends layout
 
 block content
-  h1= title
+  a( href='/' ) Go Back
+  form( method='POST' action='/new' )
+    h1= title
+    input( id='writer' type='text' name='writer' placeholder='Enter Your Name' required='' )
+    input( id='message' type='text' name='message' placeholder='Enter Message' required='' )
+    button( type='submit' ) Submit
